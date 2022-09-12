@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 1</h1>
+<input id="number1" type="number" placeholder="Nhập số a">
+<input id="number2" type="number" placeholder="Nhập số b">
+<button type="button" onclick="bai1()">Bai1</button>
+
+<h1>Bài 2</h1>
+<input id="age" type="number" placeholder="Nhập tuổi">
+<button type="button" onclick="bai2()">Bai2</button>
+
+<h1>Bài 3</h1>
+<input id="number3" type="number" placeholder="Nhập số nguyên">
+<button type="button" onclick="bai3()">Bai3</button>
+
+<h1>Bài 4</h1>
+<input id="number4" type="number" placeholder="Nhập số a">
+<input id="number5" type="number" placeholder="Nhập số b">
+<input id="number6" type="number" placeholder="Nhập số c">
+<button type="button" onclick="bai4()">Bai4</button>
+
+<h1>Bài 5</h1>
+<input id="point1" type="number" placeholder="Nhập số điểm ktra">
+<input id="point2" type="number" placeholder="Nhập số điểm giữa kỳ">
+<input id="point3" type="number" placeholder="Nhập số điểm thi cuối kì">
+
+<button type="button" onclick="bai5()">Bai5</button>
+</body>
+<script>
+    function bai1() {
+        let a = document.getElementById("number1").value;
+        let b = document.getElementById("number2").value;
+
+        if (a % b == 0) {
+            alert("a chia hết cho b");
+        } else {
+            alert("a không chia hết cho b");
+        }
+    }
+
+
+    function bai2(){
+        let age = document.getElementById("age").value;
+
+        if (age>=15){
+            alert("Đủ tuổi vào học lớp 10 ")
+        }else {
+            alert("Không đủ tuổi")
+        }
+    }
+
+    function bai3(){
+        let number3 = parseInt(document.getElementById("number3").value);
+
+        if (number3>0){
+            alert("Số vừa nhập lớn hơn 0 ")
+        }else if(number3<0) {
+            alert("Số vừa nhập nhỏ hơn 0")
+        }else {
+            alert("Số vừa nhập bằng 0")
+        }
+    }
+
+    function bai4(){
+        let a = document.getElementById("number4").value;
+        let b = document.getElementById("number5").value;
+        let c = document.getElementById("number6").value;
+
+        if(a > b && a > c){
+            alert("a lớn nhất")
+        }else if(b>c && b>a){
+            alert("b lớn nhất")
+        }else if (c>a && c>b) {
+            alert("c lớn nhất")
+        }
+
+    }
+
+    function bai5(){
+        let a = Number(document.getElementById("point1").value);
+        let b = Number(document.getElementById("point2").value);
+        let c = Number(document.getElementById("point3").value);
+
+        let tb = (a+b+c)/3
+
+        if(tb>=8){
+            alert("Xuất xắc")
+        }else if(tb>=6.5){
+            alert("Khá")
+        }else if (tb>=5) {
+            alert("Trung bình")
+        }else {
+            alert("Yếu")
+        }
+
+    }
+
+
+</script>
+</html>
